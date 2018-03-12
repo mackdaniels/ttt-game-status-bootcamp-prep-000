@@ -26,7 +26,10 @@ def won?(board)
     position_2 = board[win_index_2] # load the value of the board at win_index_2
     position_3 = board[win_index_3] # load the value of the board at win_index_3
     if position_1 == "X" && position_2 == "X" && position_3 == "X"
+<<<<<<< HEAD
 
+=======
+>>>>>>> ab65b70915e7787c836b012cd23cc7d32f355c58
       return WIN_COMBINATIONS[array_count]
     elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
       return WIN_COMBINATIONS[array_count]
@@ -62,20 +65,29 @@ end
 
 
 def over?(board)
+<<<<<<< HEAD
   if full?(board) == false && won?(board) == false
     return false
   end
   if full?(board) == false && won?(board) != false
+=======
+  if draw?(board) == true
+>>>>>>> ab65b70915e7787c836b012cd23cc7d32f355c58
     return true
   end
   if won?(board) != false && full?(board) == true
     return true
   end
+<<<<<<< HEAD
   if draw?(board) == true
+=======
+  if won?(board) != false && full?(board) == false
+>>>>>>> ab65b70915e7787c836b012cd23cc7d32f355c58
     return true
   end
 end
 
+<<<<<<< HEAD
 def winner(board)
   if won?(board) != false
     array_count = 0
@@ -95,4 +107,7 @@ def winner(board)
       end
     end
   end
+=======
+def winner?(board)
+>>>>>>> ab65b70915e7787c836b012cd23cc7d32f355c58
 end
